@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="grass.jpeg" type="image/x-icon">
+<title> Touch grass</title>
+<style>
+  .sub-body {
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color:white;
+    text-align: center;
+    background: linear-gradient(135deg, #97E391,#085f17);
+  }
+  #counter {
+    margin-bottom: 20px;
+  }
+  #grassPic{
+    width: 400px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 5px 8px 0px #ffe10033, 0px 8px 18px 0px #fffb0032;
+  }
+
+</style>
+</head>
+<body>
+  <div class="sub-body">
+<h1>Touch grass simulator</h1>
+
+<p> You have touched grass <div id="counter">0</div> times!</p> 
+<p onclick="incrementCounter()"><img src="grass.jpeg" alt="grass" id="grassPic"></p>
+</div>
+
+
+<script>
+  // Initialize counter
+  let count = 0;
+
+  // Function to increment counter and update display
+  function incrementCounter() {
+    count++;
+    document.getElementById('counter').innerText = count;
+  }
+</script>
+
+</body>
+</html>
